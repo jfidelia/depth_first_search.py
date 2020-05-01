@@ -18,10 +18,10 @@ class Deque:
     def size(self):
         return len(self.items)
 
-    def check_palindrome(self):
+    def check_palindrome(self, input_string):
         
-        my_d = Deque()
-        for char in self:
+        #my_d = Deque()
+        for char in input_string:
             my_d.add_rear(char)
 
         while my_d.size() >= 2: # Size of 1 or 0 means the string is a palindrome
@@ -33,4 +33,5 @@ class Deque:
 
         return True
 
-print(check_palindrome('mom'))
+my_d = Deque()
+print(my_d.check_palindrome('mom'))
